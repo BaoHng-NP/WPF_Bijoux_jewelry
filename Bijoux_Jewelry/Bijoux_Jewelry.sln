@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bijoux_Jewelry", "Bijoux_Jewelry\Bijoux_Jewelry.csproj", "{047F461E-616C-43B6-87BC-452E3615464E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bijoux_Jewelry.DataAccess", "Bijoux_Jewelry.DataAccess\Bijoux_Jewelry.DataAccess.csproj", "{C2768FE2-3453-47A5-8469-EF5EF8CBDBDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bijoux_Jewelry.BusinessLogicLayer", "Bijoux_Jewelry.Services\Bijoux_Jewelry.BusinessLogicLayer.csproj", "{D83CE82F-8097-4CAF-A835-B7546CC41F14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{047F461E-616C-43B6-87BC-452E3615464E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047F461E-616C-43B6-87BC-452E3615464E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047F461E-616C-43B6-87BC-452E3615464E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047F461E-616C-43B6-87BC-452E3615464E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2768FE2-3453-47A5-8469-EF5EF8CBDBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2768FE2-3453-47A5-8469-EF5EF8CBDBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2768FE2-3453-47A5-8469-EF5EF8CBDBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2768FE2-3453-47A5-8469-EF5EF8CBDBDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D83CE82F-8097-4CAF-A835-B7546CC41F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D83CE82F-8097-4CAF-A835-B7546CC41F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D83CE82F-8097-4CAF-A835-B7546CC41F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D83CE82F-8097-4CAF-A835-B7546CC41F14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86771FEE-C88E-4970-8771-75A56017CD58}
+	EndGlobalSection
+EndGlobal

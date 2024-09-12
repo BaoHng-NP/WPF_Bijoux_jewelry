@@ -1,0 +1,76 @@
+﻿<Window x:Class="Bijoux_Jewelry.OrderDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bijoux_Jewelry"
+        mc:Ignorable="d"
+        Title="OrderDetail" Height="500" Width="850" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Order Detail" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Order ID" HorizontalAlignment="Left" Margin="27,44,0,0" VerticalAlignment="Top" Height="36" Width="88"/>
+        <Label Content="Product ID" HorizontalAlignment="Left" Margin="27,80,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Label Content="Production Price" HorizontalAlignment="Left" Margin="576,292,0,0" VerticalAlignment="Top" Height="36" Width="147"/>
+        <Label Content="Product Price" HorizontalAlignment="Left" Margin="576,256,0,0" VerticalAlignment="Top" Height="36" Width="122"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="584,378,0,0" VerticalAlignment="Top" Height="31" Width="53"/>
+        <Label x:Name="lableProfit" Content="Profit Rate(%)" HorizontalAlignment="Left" Margin="576,323,0,0" VerticalAlignment="Top" Height="36" Width="93"/>
+        <Label Content="Status" HorizontalAlignment="Left" Margin="283,44,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Label Content="Note" HorizontalAlignment="Left" Margin="283,148,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="283,80,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Label x:Name="labelCustomerName" Content="Customer Name" HorizontalAlignment="Left" Margin="27,112,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Label x:Name="lableContact" Content="Contact" HorizontalAlignment="Left" Margin="27,148,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+
+
+        <DataGrid x:Name="metalDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="27,228,280,150">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Metal" Width="*" Binding="{Binding Metal.Name}" />
+                <DataGridTextColumn Header="Weight" Width="*" Binding="{Binding Weight}" />
+                <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price, StringFormat=N0}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Metal list" HorizontalAlignment="Left" Margin="27,198,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <DataGrid x:Name="diamondDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="27,364,280,15">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Diamond Id" Width="*" Binding="{Binding DiamondId}" />
+                <DataGridTextColumn Header="Size" Width="*" Binding="{Binding Diamond.Size}" />
+                <DataGridTextColumn Header="Origin" Width="*" Binding="{Binding Diamond.DiamondOrigin.Name}" />
+                <DataGridTextColumn Header="Color" Width="*" Binding="{Binding Diamond.DiamondColor.Name}" />
+                <DataGridTextColumn Header="Clarity" Width="*" Binding="{Binding Diamond.DiamondClarity.Name}" />
+                <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price, StringFormat=N0}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Diamond list" HorizontalAlignment="Left" Margin="27,337,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+
+
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="701,414,0,0" VerticalAlignment="Top" Height="28" Width="70" Click="btnCancel_Click"/>
+        <Button x:Name="btnAddMetal" Content="Add" HorizontalAlignment="Left" Margin="117,202,0,0" VerticalAlignment="Top" Click="btnAddMetal_Click"/>
+        <Button x:Name="btnAddDiamond" Content="Add" HorizontalAlignment="Left" Margin="117,341,0,0" VerticalAlignment="Top" Click="btnAddDiamond_Click"/>
+        <Button x:Name="btnSubmitPrice" Visibility="Hidden" Content="Update design info" HorizontalAlignment="Left" Margin="605,414,0,0" VerticalAlignment="Top" Height="28" Width="118" Click="btnSubmitPrice_Click"/>
+        <TextBox x:Name="txtTotal" IsReadOnly="True" HorizontalAlignment="Left" Margin="692,378,0,0" TextWrapping="Wrap" Text="total" VerticalAlignment="Top" Width="120"/>
+        <TextBox IsReadOnly="True" x:Name="txtProfit" HorizontalAlignment="Left" Margin="692,328,0,0" TextWrapping="Wrap" Text="profit" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtProductionPrice" IsReadOnly="True" HorizontalAlignment="Left" Margin="692,297,0,0" TextWrapping="Wrap" Text="production" VerticalAlignment="Top" Width="120"/>
+        <TextBox IsReadOnly="True" x:Name="txtProductPrice" HorizontalAlignment="Left" Margin="692,264,0,0" TextWrapping="Wrap" Text="product price" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtOrderId" HorizontalAlignment="Left" Margin="125,50,0,0" TextWrapping="Wrap" Text="OrderID" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
+        <TextBox IsReadOnly="True" x:Name="txtNote" HorizontalAlignment="Left" Margin="344,153,0,0" TextWrapping="Wrap" Text="note" VerticalAlignment="Top" Width="170"/>
+        <TextBox IsReadOnly="True" x:Name="txtCustomerName" HorizontalAlignment="Left" Margin="125,117,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtproductId" IsReadOnly="True" HorizontalAlignment="Left" Margin="125,85,0,0" TextWrapping="Wrap" Text="productID" VerticalAlignment="Top" Width="120"/>
+        <TextBox IsReadOnly="True" x:Name="txtContact" HorizontalAlignment="Left" Margin="125,153,0,0" TextWrapping="Wrap" Text="contact" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDate" IsReadOnly="True" HorizontalAlignment="Left" Margin="344,85,0,0" TextWrapping="Wrap" Text="date" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtStatus" IsReadOnly="True" HorizontalAlignment="Left" Margin="344,50,0,0" TextWrapping="Wrap" Text="status" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="lableSize" Content="Size" HorizontalAlignment="Left" Margin="283,112,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <TextBox IsReadOnly="True" x:Name="txtSize" HorizontalAlignment="Left" Margin="344,117,0,0" TextWrapping="Wrap" Text="size" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnDeleteMetal" Content="Delete" HorizontalAlignment="Left" Margin="164,202,0,0" VerticalAlignment="Top" Click="btnDeleteMetal_Click"/>
+        <Button x:Name="btnDeleteDiamond" Content="Delete" HorizontalAlignment="Left" Margin="164,341,0,0" VerticalAlignment="Top" Click="btnDeleteDiamond_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="137" Margin="602,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="207"/>
+        <Button x:Name="btnImage" Visibility="Hidden" Content="image" HorizontalAlignment="Left" Margin="772,44,0,0" VerticalAlignment="Top" Click="btnImage_Click"/>
+        <Label x:Name="lableDeposit" Content="Deposit has paid" HorizontalAlignment="Left" Margin="576,350,0,0" VerticalAlignment="Top" Height="36" Width="99"/>
+        <TextBox IsReadOnly="True" x:Name="txtDeposit" HorizontalAlignment="Left" Margin="692,355,0,0" TextWrapping="Wrap" Text="deposit" VerticalAlignment="Top" Width="120"/>
+        <Label FontWeight="ExtraBold" x:Name="DepositNote"  Visibility="Hidden" Content="" HorizontalAlignment="Left" Margin="576,225,0,0" VerticalAlignment="Top" Width="233"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="136" Margin="605,44,0,0" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="btnConfirmPayment" Content="Confirm payment" HorizontalAlignment="Left" Margin="692,413,0,0" Visibility="Hidden" VerticalAlignment="Top" Height="29" Width="108" Click="btnConfirmPayment_Click"/>
+        <Label Content="IMAGE" HorizontalAlignment="Left" Margin="683,184,0,0" VerticalAlignment="Top"/>
+        <Label Visibility="Hidden" x:Name="prodStatusLable" Content="Production Status" HorizontalAlignment="Left" Margin="283,179,0,0" VerticalAlignment="Top" Height="36" Width="110"/>
+        <TextBox Visibility="Hidden" x:Name="txtprodStatus" IsReadOnly="True" HorizontalAlignment="Left" Margin="393,184,0,0" TextWrapping="Wrap" Text="status" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</Window>

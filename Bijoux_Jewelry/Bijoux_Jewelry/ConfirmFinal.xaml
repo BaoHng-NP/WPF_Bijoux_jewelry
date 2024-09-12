@@ -1,0 +1,16 @@
+﻿<Window x:Class="Bijoux_Jewelry.ConfirmFinal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bijoux_Jewelry"
+        mc:Ignorable="d"
+        Title="ConfirmFinal" Height="450" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="250" Stroke="Black" VerticalAlignment="Center" Width="251" RadiusX="10" RadiusY="10"/>
+        <Button Content="Confirm complete production" HorizontalAlignment="Center" Margin="0,364,0,0" VerticalAlignment="Top" Height="37" Width="196" Click="Button_Click" />
+        <Image x:Name="image" HorizontalAlignment="Left" Height="221" Margin="102,105,0,0" VerticalAlignment="Top" Width="204" />
+        <Button x:Name="btnImage"  Content="Choose a final product image!" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Top" Click="btnImage_Click" Margin="0,34,0,0"/>
+
+    </Grid>
+</Window>

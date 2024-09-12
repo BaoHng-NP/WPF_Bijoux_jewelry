@@ -1,0 +1,27 @@
+﻿<Window x:Class="Bijoux_Jewelry.AddMetal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bijoux_Jewelry"
+        mc:Ignorable="d"
+        Title="AddMetal" Height="400" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="373*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="metalDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="32,98,32,125" Grid.ColumnSpan="2" LostFocus="metalDataGrid_LostFocus" SelectionChanged="metalDataGrid_SelectionChanged" GotFocus="metalDataGrid_GotFocus">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Metal" Width="*" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Buy Price" Width="*" Binding="{Binding BuyPricePerGram}" />
+                <DataGridTextColumn Header="Sale Price" Width="*" Binding="{Binding SalePricePerGram}" />
+                <DataGridTextColumn Header="Weight Unit" Width="*" Binding="{Binding SpecificWeight}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Weight" HorizontalAlignment="Left" Margin="32,50,0,0" VerticalAlignment="Top" Height="36" Width="88"/>
+        <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Margin="89,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="223,302,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>
